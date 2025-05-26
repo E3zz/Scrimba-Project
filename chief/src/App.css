@@ -1,0 +1,10 @@
+/* Hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Prevent content shifting due to scrollbar removal */
+html {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}

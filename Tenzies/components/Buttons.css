@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+.inner-box {
+    width: 600px;
+    height: 250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: repeat(5, auto); /* 3 columns */
+    gap: 20px;
+    justify-content: center;
+}
+
+.play-btn {
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    width: 70px;
+    height: 65px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #ffffff;
+    cursor: pointer;
+
+    /* Pop-out shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.08);
+    
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Optional: add slight scale on hover or active click */
+.play-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15),
+                0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.play-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.roll-btn{
+    font-family:'Karla', sans-serif;
+    background:#5035FF;
+    width:150px;
+    height:60px;
+    border:none;
+    border-radius: 8px;
+    color: white;
+    cursor:pointer;
+    font-size: 20px;
+    font-weight:bold;
+
+
+}
+.held{
+    background:#59E391;
+}
+.roll-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15),
+                0 2px 4px rgba(0, 0, 0, 0.1);
+} 
+
+.roll-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0, 0, 0.08);
+}

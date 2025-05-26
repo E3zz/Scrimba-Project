@@ -1,0 +1,31 @@
+.suggestion-box{
+    width:594px;
+    height:1552px;
+    padding-left: 715px;
+    margin-top: 70px
+}
+.instructions{
+    margin-top:40px;
+}
+.instructions h3{
+    color:#475467;
+}
+
+@media screen and (max-width: 480px) {
+    .suggestion-box {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .ingredients-list li {
+        font-size: 14px;
+    }
+
+    .instructions h4 {
+        font-size: 16px;
+    }
+}

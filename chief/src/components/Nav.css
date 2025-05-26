@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 10vh;
+    border: 1px solid grey;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    cursor: pointer;
+    top:0px;
+    left:0px;
+    margin-bottom:40px;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    nav {
+        /* flex-direction: column;  Stack items on mobile */
+        height: auto;
+        padding: 10px 0;
+        width:100%;
+    }
+
+    .image img {
+        width: 50px;  /* Reduce icon size */
+    }
+
+    .Nav-text {
+        font-size: large;  /* Reduce text size */
+        text-align: center;
+    }
+}
+
+/* Additional tweaks for very small screens */
+@media screen and (max-width: 480px) {
+    nav{
+        width:100%;
+    }
+    .image img {
+        width: 40px;  /* Further reduce icon size */
+    }
+
+    .Nav-text {
+        font-size: medium;
+    }
+}
