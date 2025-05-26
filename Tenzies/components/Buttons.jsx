@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Buttons.css";
 import React from "react";
 import Die from "./Die";
-import { useWindowSize } from "react-use";
 import Confetti from "react-confetti";
 
 const generateAllNewDice = () => {
@@ -15,8 +14,15 @@ const generateAllNewDice = () => {
 
 const Buttons = () => {
   const [number, setNumber] = useState(() => generateAllNewDice());
+  const buttonRef = useRef(null)
 
   const GameWon = number.every(die => die.isheld )  && number.every(die => die.val === number[0].val ) 
+
+  useEffect(()=>{
+    if(GameWon){
+      buttonRef.current.focus()
+    }
+  },[GameWon]);
 
   const handleRoll = () => {
     if (GameWon){
@@ -55,7 +61,7 @@ const Buttons = () => {
       <div className="inner-box">
         <div className="btns">{dieElement}</div>
       </div>
-      <button onClick={handleRoll} className="roll-btn">
+      <button ref={buttonRef} onClick={handleRoll} className="roll-btn">
         {GameWon ? "New Game" : "Roll"}
       </button>
     </>

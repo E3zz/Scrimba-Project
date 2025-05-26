@@ -63,7 +63,9 @@
     font-size: 20px;
     font-weight:bold;
 
-
+}
+.roll-btn:focus {
+  outline: 3px solid limegreen;
 }
 .held{
     background:#59E391;
